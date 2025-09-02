@@ -79,12 +79,14 @@ const Hero = () => {
           <div className="animate-slide-up animate-stagger-2">
             <div className="relative mx-auto lg:mx-0 w-64 h-64 lg:w-72 lg:h-72">
               <div className="absolute inset-0 hero-gradient rounded-full opacity-15 blur-2xl" />
-              <div className="relative portfolio-card rounded-full overflow-hidden border-4 border-background shadow-xl">
-                <img
-                  src="/lovable-uploads/242c0cdc-f7a1-4b36-83b5-ceb02ba1297b.png"
-                  alt="Saira Bhanu Shaik - Product Manager"
-                  className="w-full h-full object-cover"
-                />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/10 to-accent/10 p-2">
+                <div className="w-full h-full rounded-full overflow-hidden border-2 border-background">
+                  <img
+                    src="/lovable-uploads/242c0cdc-f7a1-4b36-83b5-ceb02ba1297b.png"
+                    alt="Saira Bhanu Shaik - Product Manager"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
