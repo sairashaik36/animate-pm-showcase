@@ -77,9 +77,9 @@ const Hero = () => {
 
           {/* Profile Image */}
           <div className="animate-slide-up animate-stagger-2">
-            <div className="relative mx-auto lg:mx-0 w-80 h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 hero-gradient rounded-full opacity-20 blur-3xl" />
-              <div className="relative portfolio-card rounded-full overflow-hidden">
+            <div className="relative mx-auto lg:mx-0 w-64 h-64 lg:w-72 lg:h-72">
+              <div className="absolute inset-0 hero-gradient rounded-full opacity-15 blur-2xl" />
+              <div className="relative portfolio-card rounded-full overflow-hidden border-4 border-background shadow-xl">
                 <img
                   src="/lovable-uploads/242c0cdc-f7a1-4b36-83b5-ceb02ba1297b.png"
                   alt="Saira Bhanu Shaik - Product Manager"
