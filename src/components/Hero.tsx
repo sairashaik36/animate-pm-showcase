@@ -81,7 +81,7 @@ const Hero = () => {
               <div className="absolute inset-0 hero-gradient rounded-full opacity-20 blur-3xl" />
               <div className="relative portfolio-card rounded-full overflow-hidden">
                 <img
-                  src="/profile-image.jpg"
+                  src="/lovable-uploads/242c0cdc-f7a1-4b36-83b5-ceb02ba1297b.png"
                   alt="Saira Bhanu Shaik - Product Manager"
                   className="w-full h-full object-cover"
                 />
