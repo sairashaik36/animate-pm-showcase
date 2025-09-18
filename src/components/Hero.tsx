@@ -163,13 +163,13 @@ const Hero = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-4 text-center border border-primary/30 hover:border-primary/40 transition-colors">
-                    <p className="font-semibold text-foreground">ONDC Solutions</p>
+                    <p className="font-bold text-lg text-accent mb-1">ONDC Solutions</p>
                   </div>
                   <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-4 text-center border border-primary/30 hover:border-primary/40 transition-colors">
-                    <p className="font-semibold text-foreground">AI-Powered Products</p>
+                    <p className="font-bold text-lg text-accent mb-1">AI-Powered Products</p>
                   </div>
                   <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-4 text-center border border-primary/30 hover:border-primary/40 transition-colors">
-                    <p className="font-semibold text-sm text-foreground">Saas Products</p>
+                    <p className="font-bold text-lg text-accent mb-1">SaaS Products</p>
                   </div>
                 </div>
               </div>
