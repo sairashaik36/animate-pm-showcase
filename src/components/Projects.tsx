@@ -145,14 +145,14 @@ const Projects = () => {
                 </div>
 
                 {/* Footer - Hidden for now since no external links available */}
-                <div className="px-6 pb-6 pt-0">
+                {/* <div className="px-6 pb-6 pt-0">
                   <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <Button variant="outline" size="sm" disabled className="flex-1">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       View Project
                     </Button>
                   </div>
-                </div>
+                </div> */}
               </Card>
             </div>
           ))}
