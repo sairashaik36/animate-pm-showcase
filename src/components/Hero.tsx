@@ -169,7 +169,7 @@ const Hero = () => {
                     <p className="font-semibold text-foreground">AI-Powered Products</p>
                   </div>
                   <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl p-4 text-center border border-primary/30 hover:border-primary/40 transition-colors">
-                    <p className="font-medium text-sm text-foreground">Pan-India Operations</p>
+                    <p className="font-semibold text-sm text-foreground">Saas Products</p>
                   </div>
                 </div>
               </div>
