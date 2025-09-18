@@ -55,25 +55,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-5 w-5" />,
+      icon: <Mail className="h-6 w-6" />,
       label: "Email",
       value: "sairashaik36@gmail.com",
       href: "mailto:sairashaik36@gmail.com"
     },
     {
-      icon: <Phone className="h-5 w-5" />,
+      icon: <Phone className="h-6 w-6" />,
       label: "Phone",
       value: "+91 7569316623",
       href: "tel:+917569316623"
     },
     {
-      icon: <MapPin className="h-5 w-5" />,
+      icon: <MapPin className="h-6 w-6" />,
       label: "Location",
       value: "Ongole, Andhra Pradesh, India",
       href: null
     },
     {
-      icon: <Linkedin className="h-5 w-5" />,
+      icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
       value: "linkedin.com/in/sairabhanu",
       href: "https://linkedin.com/in/sairabhanu"
@@ -92,8 +92,8 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Form with Contact Info */}
           <div className="animate-slide-left">
             <Card className="portfolio-card">
               <div className="p-8">
@@ -160,84 +160,26 @@ const Contact = () => {
                     )}
                   </Button>
                 </form>
-              </div>
-            </Card>
-          </div>
 
-          {/* Contact Info & Resume */}
-          <div className="animate-slide-right space-y-6">
-            {/* Contact Information */}
-            <Card className="portfolio-card">
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
+                {/* Separator Line */}
+                <div className="my-8 border-t border-border"></div>
+
+                {/* Contact Information */}
                 <div className="space-y-4">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                      <div className="text-primary">
+                  {/* <h4 className="text-lg font-semibold mb-4">Get In Touch</h4> */}
+                  <div className="flex gap-4 justify-evenly">
+                    {contactInfo.map((info, index) => (
+                      <a
+                        key={index}
+                        href={info.href || '#'}
+                        target={info.href?.startsWith('http') ? '_blank' : undefined}
+                        rel={info.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="text-primary hover:text-primary/80 transition-colors p-2 rounded-lg hover:bg-muted/50"
+                        title={info.label}
+                      >
                         {info.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-sm text-muted-foreground">{info.label}</div>
-                        {info.href ? (
-                          <a
-                            href={info.href}
-                            target={info.href.startsWith('http') ? '_blank' : undefined}
-                            rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="font-medium hover:text-primary transition-colors"
-                          >
-                            {info.value}
-                            {info.href.startsWith('http') && (
-                              <ExternalLink className="inline ml-1 h-3 w-3" />
-                            )}
-                          </a>
-                        ) : (
-                          <div className="font-medium">{info.value}</div>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-
-            {/* Resume Download */}
-            <Card className="portfolio-card">
-              <div className="p-8 text-center">
-                <h3 className="text-xl font-semibold mb-4">Download Resume</h3>
-                <p className="text-muted-foreground mb-6">
-                  Get a comprehensive overview of my experience, skills, and achievements.
-                </p>
-                <Button
-                  onClick={downloadResume}
-                  size="lg"
-                  className="w-full group glow-primary"
-                >
-                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                  Download PDF Resume
-                </Button>
-              </div>
-            </Card>
-
-            {/* Quick Stats */}
-            <Card className="portfolio-card">
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Quick Stats</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-3 rounded-lg bg-primary/5">
-                    <div className="text-2xl font-bold text-primary">3+</div>
-                    <div className="text-xs text-muted-foreground">Years Experience</div>
-                  </div>
-                  <div className="text-center p-3 rounded-lg bg-primary/5">
-                    <div className="text-2xl font-bold text-primary">6+</div>
-                    <div className="text-xs text-muted-foreground">Enterprise Clients</div>
-                  </div>
-                  <div className="text-center p-3 rounded-lg bg-primary/5">
-                    <div className="text-2xl font-bold text-primary">50%</div>
-                    <div className="text-xs text-muted-foreground">Efficiency Improvement</div>
-                  </div>
-                  <div className="text-center p-3 rounded-lg bg-primary/5">
-                    <div className="text-2xl font-bold text-primary">100%</div>
-                    <div className="text-xs text-muted-foreground">Compliance Rate</div>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

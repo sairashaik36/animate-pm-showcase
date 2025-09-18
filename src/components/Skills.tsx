@@ -78,140 +78,61 @@ const Skills = () => {
   const languages = ["English", "Hindi", "Telugu"];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="skills" className="py-20 bg-gradient-to-b from-background to-muted/20">
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Header Section */}
+        <div className="text-center mb-20">
           <div className="animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4">Skills & Expertise</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              Skills & Expertise
+            </h2>
+            <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
               Comprehensive skill set spanning product management, AI technologies, and digital commerce
             </p>
           </div>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
               className={`animate-bounce-in animate-stagger-${index + 1}`}
             >
-              <Card className="portfolio-card h-full group hover:scale-105 transition-all duration-300">
-                <div className="p-6">
-                  <div className={`inline-flex p-3 rounded-lg ${category.bgColor} mb-4`}>
-                    <div className={category.color}>
-                      {category.icon}
+              <Card className="portfolio-card h-full group hover:scale-[1.02] hover:shadow-xl transition-all duration-500 border-0 shadow-lg bg-card/50 backdrop-blur-sm">
+                <div className="p-8 h-full flex flex-col">
+                  {/* Icon and Title Section */}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className={`inline-flex p-4 rounded-xl ${category.bgColor} flex-shrink-0`}>
+                      <div className={category.color}>
+                        {category.icon}
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300 leading-tight">
+                        {category.title}
+                      </h3>
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-semibold mb-4 group-hover:text-primary transition-colors">
-                    {category.title}
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, idx) => (
-                      <Badge 
-                        key={idx} 
-                        variant="secondary" 
-                        className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
+                  {/* Skills Section */}
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div className="flex flex-wrap gap-2.5">
+                      {category.skills.map((skill, idx) => (
+                        <Badge 
+                          key={idx} 
+                          variant="secondary" 
+                          className="text-sm px-3 py-1.5 hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-default font-medium border border-border/50 hover:border-primary/50"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Card>
             </div>
           ))}
-        </div>
-
-        {/* Additional Info Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Certifications */}
-          <div className="animate-slide-left">
-            <Card className="portfolio-card">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                  <Database className="h-5 w-5 text-primary" />
-                  Certifications
-                </h3>
-                <div className="space-y-4">
-                  {certifications.map((cert, index) => (
-                    <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                      <div className="text-primary mt-1">
-                        {cert.icon}
-                      </div>
-                      <div>
-                        <div className="font-medium">{cert.title}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {cert.issuer} • {cert.year}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          {/* Languages & Highlights */}
-          <div className="animate-slide-right space-y-6">
-            {/* Languages */}
-            <Card className="portfolio-card">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                  <Globe className="h-5 w-5 text-primary" />
-                  Languages
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {languages.map((language, index) => (
-                    <Badge key={index} variant="outline" className="text-primary border-primary/20">
-                      {language}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </Card>
-
-            {/* Leadership Highlights */}
-            <Card className="portfolio-card">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                  <Users className="h-5 w-5 text-primary" />
-                  Leadership & Recognition
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                    <div>
-                      <div className="font-medium">ONDC Domain Expert</div>
-                      <div className="text-sm text-muted-foreground">
-                        Onboarded 6 enterprise clients across multiple business domains
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                    <div>
-                      <div className="font-medium">Cross-Functional Leader</div>
-                      <div className="text-sm text-muted-foreground">
-                        Directed product delivery across engineering, QA, design, and client stakeholders
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                    <div>
-                      <div className="font-medium">Intern of the Month</div>
-                      <div className="text-sm text-muted-foreground">
-                        Recognized at Eunimart for exceptional quality deliverables (2022)
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
