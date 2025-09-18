@@ -47,7 +47,7 @@ const Index = () => {
       <footer className="bg-card border-t py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            © 2024 Saira Bhanu Shaik. Built with React, TypeScript & Tailwind CSS.
+            © 2024 Saira Bhanu Shaik.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Driving innovation in AI SaaS and digital commerce solutions.
